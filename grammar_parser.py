@@ -1,6 +1,6 @@
 from parglare import Parser, Grammar
 
-file_name = "entrada.pg"
+file_name = "entry.pg"
 
 g = Grammar.from_file(file_name)
 parser = Parser(g, debug=True)
