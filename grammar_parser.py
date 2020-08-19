@@ -4,7 +4,7 @@ from parglare import Parser, Grammar
 file_name = "entry.pg"
 
 g = Grammar.from_file(file_name)
-parser = Parser(g, debug=True)
+parser = Parser(g, debug=True, debug_colors=True)
 
 result = parser.parse("34 + 4.6")
 
