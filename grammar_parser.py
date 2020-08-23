@@ -12,7 +12,9 @@ def main():
     g = Grammar.from_file(fileName)
     parser = Parser(g, debug=True, debug_colors=True)
 
-    result = parser.parse("abcaa")
+
+    testWord = input("Digite a palavra a ser avaliada: ")
+    result = parser.parse(testWord)
 
     print("Result = ", result)
 
