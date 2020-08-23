@@ -9,7 +9,7 @@ def main():
     grammar = inputfile.readGrammarFile('gramatica.txt')
     pgfile.createPgFile(fileName, grammar)
 
-    g = Grammar.from_file(fileName)
+    g = Grammar.from_file('entryModificado.pg')
     parser = Parser(g, debug=True, debug_colors=True)
 
 
