@@ -1,3 +1,3 @@
-def createPgFile(name): 
-    pg_file = open(name ,"w+")
+def createPgFile(name):
+    pgFile = open(name ,"w+")
     

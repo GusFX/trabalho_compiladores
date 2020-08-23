@@ -5,11 +5,11 @@ import inputFile as inputfile
 
 
 def main():
-    file_name = 'entry.pg'
+    fileName = 'entry.pg'
     grammar = inputfile.readGrammarFile('gramatica.txt')
-    #pgfile.createPgFile(file_name)
+    pgfile.createPgFile(fileName, grammar)
 
-    #g = Grammar.from_file(file_name)
+    #g = Grammar.from_file(fileName)
     #parser = Parser(g, debug=True, debug_colors=True)
 
     #result = parser.parse("34 + 4.6")
