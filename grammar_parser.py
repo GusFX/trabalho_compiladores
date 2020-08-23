@@ -9,12 +9,12 @@ def main():
     grammar = inputfile.readGrammarFile('gramatica.txt')
     pgfile.createPgFile(fileName, grammar)
 
-    #g = Grammar.from_file(fileName)
-    #parser = Parser(g, debug=True, debug_colors=True)
+    g = Grammar.from_file(fileName)
+    parser = Parser(g, debug=True, debug_colors=True)
 
-    #result = parser.parse("34 + 4.6")
+    result = parser.parse("abcaa")
 
-    #print("Result = ", result)
+    print("Result = ", result)
 
 if __name__ == '__main__':
     main()

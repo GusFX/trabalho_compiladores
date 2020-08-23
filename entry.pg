@@ -1,10 +1,9 @@
-E: E '+' E  {left, 1}
- | E '-' E  {left, 1}
- | E '*' E  {left, 2}
- | E '/' E  {left, 2}
- | E '^' E  {right, 3}
- | '(' E ')'
- | number;
+S:	a A;
+A:	b A;
+A:	c a A;
+A:	a;
 
 terminals
-number: /\d+(\.\d+)?/;
+a: "a";
+b: "b";
+c: "c";
