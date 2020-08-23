@@ -8,6 +8,7 @@ def readGrammarFile(name):
             data.append(readTerminals(array_line[1]))
         elif i == 2: 
             data.append(readProductionRules(array_line[1]))
+    data.append(readInitialTerminal(lines[len(lines) - 1]))
     print(data)
 
 def readTerminals(array_line):
@@ -23,6 +24,14 @@ def readProductionRules(array_line):
         production = production.split('>')
         production_list[production[0]] = separateProductionRule(production[1])
     return production_list
+
+def readInitialTerminal(array_line):
+    array_line = array_line.replace(" ", "")
+    index = array_line.find('=')
+    if(index < 0): 
+        print('Entrada não está no formato reconhecido!')
+        exit(1)
+    return array_line[index + 1:index + 2]
 
 def filterString(string): 
     end_index = string.find(']')
