@@ -9,7 +9,7 @@ def readGrammarFile(name):
         elif i == 2: 
             data.append(readProductionRules(arrayLine[1]))
     data.append(readInitialTerminal(lines[len(lines) - 1]))
-    print(data)
+    return data
 
 def readTerminals(arrayLine):
     arrayLine = filterString(arrayLine)
