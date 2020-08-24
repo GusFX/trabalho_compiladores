@@ -1,4 +1,4 @@
-V = [A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R]
-T = [p, *, +, a, f, ., $, \, z, x, ^, -, c, n, m]
-P = [(A>B|C), (B>ApC), (C>D|E), (D>CE), (E>F|G|H), (F>H*), (G>H+), (H>I|J|K|L|M), (I>aAf), (J>.), (K>$), (L>n|\m), (M>N|O), (N>zPx), (O>z^Px), (P>Q|QP), (Q>R|L), (R>L-L)]
-S = A
+V = [S, A]
+T = [a, b, c]
+P = [(S>aA), (A>bA|caA|a)]
+S = S
