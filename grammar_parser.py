@@ -5,18 +5,18 @@ import inputFile as inputfile
 
 
 def main():
-    fileName = 'entry.pg'
-    grammar = inputfile.readGrammarFile('gramatica.txt')
-    pgfile.createPgFile(fileName, grammar)
+    fileName = 'entryER.pg'
+    # grammar = inputfile.readGrammarFile('gramatica.txt')
+    # pgfile.createPgFile(fileName, grammar)
 
-    g = Grammar.from_file('entryModificado.pg')
+    g = Grammar.from_file(fileName)
     parser = Parser(g, debug=True, debug_colors=True)
 
+    while(1):
+        testWord = input("\nDigite a palavra a ser avaliada: ")
+        result = parser.parse(testWord)
 
-    testWord = input("Digite a palavra a ser avaliada: ")
-    result = parser.parse(testWord)
-
-    print("Result = ", result)
+        print("Result = ", result)
 
 if __name__ == '__main__':
     main()
