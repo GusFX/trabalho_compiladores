@@ -12,11 +12,14 @@ def main():
     g = Grammar.from_file(fileName)
     parser = Parser(g, debug=True, debug_colors=True)
 
-    while(1):
-        testWord = input("\nDigite a palavra a ser avaliada: ")
-        result = parser.parse(testWord)
-
-        print("Result = ", result)
+    try:
+        while True:
+            testWord = input("Digite a palavra a ser avaliada: ")
+            result = parser.parse(testWord)
+            print("Result = ", result)
+    except KeyboardInterrupt:
+        print("\nAté mais!")
+        exit(1)
 
 if __name__ == '__main__':
     main()
