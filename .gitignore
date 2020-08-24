@@ -1,3 +1,3 @@
 .vscode/
-entry.pgt
 __pycache__/
+*.pgt

@@ -5,11 +5,11 @@ import inputFile as inputfile
 
 
 def main():
-    fileName = 'entry.pg'
-    grammar = inputfile.readGrammarFile('gramatica.txt')
-    pgfile.createPgFile(fileName, grammar)
+    fileName = 'entryER.pg'
+    # grammar = inputfile.readGrammarFile('gramatica.txt')
+    # pgfile.createPgFile(fileName, grammar)
 
-    g = Grammar.from_file('entryModificado.pg')
+    g = Grammar.from_file(fileName)
     parser = Parser(g, debug=True, debug_colors=True)
 
     try:
@@ -18,9 +18,8 @@ def main():
             result = parser.parse(testWord)
             print("Result = ", result)
     except KeyboardInterrupt:
-        print("Até mais!")
+        print("\nAté mais!")
         exit(1)
-
 
 if __name__ == '__main__':
     main()
