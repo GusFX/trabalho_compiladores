@@ -6,8 +6,9 @@ import inputFile as inputfile
 
 def main():
     fileName = 'entryER.pg'
-    # grammar = inputfile.readGrammarFile('gramatica.txt')
-    # pgfile.createPgFile(fileName, grammar)
+    #grammar = inputfile.readGrammarFile('gramatica.txt')
+    #fileName = 'entry.pg'
+    #pgfile.createPgFile(fileName, grammar)
 
     g = Grammar.from_file(fileName)
     parser = Parser(g, debug=True, debug_colors=True)
