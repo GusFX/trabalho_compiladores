@@ -12,11 +12,15 @@ def main():
     g = Grammar.from_file('entryModificado.pg')
     parser = Parser(g, debug=True, debug_colors=True)
 
+    try:
+        while True:
+            testWord = input("Digite a palavra a ser avaliada: ")
+            result = parser.parse(testWord)
+            print("Result = ", result)
+    except KeyboardInterrupt:
+        print("Até mais!")
+        exit(1)
 
-    testWord = input("Digite a palavra a ser avaliada: ")
-    result = parser.parse(testWord)
-
-    print("Result = ", result)
 
 if __name__ == '__main__':
     main()
